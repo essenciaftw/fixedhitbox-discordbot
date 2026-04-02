@@ -6,5 +6,6 @@ public enum EAredlApiStatus
     NotFound,
     ConnectionError,
     InvalidResponse,
-    UnexpectedError
+    UnexpectedError,
+    OperationCanceled
 }

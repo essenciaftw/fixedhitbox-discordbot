@@ -2,7 +2,7 @@ using fixedhitbox.Enums;
 
 namespace fixedhitbox.Services.Results;
 
-public class AredlApiResult<T>
+public sealed class AredlApiResult<T>
 {
 
     public EAredlApiStatus Status { get; set; }
@@ -33,4 +33,7 @@ public class AredlApiResult<T>
 
     public static AredlApiResult<T> UnexpectedError(string errorMessage)
         => new(EAredlApiStatus.UnexpectedError, default, errorMessage);
+    
+    public static AredlApiResult<T> OperationCanceled(string errorMessage)
+        => new(EAredlApiStatus.OperationCanceled, default, errorMessage);
 }

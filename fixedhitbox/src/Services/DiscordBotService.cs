@@ -2,6 +2,8 @@
 using fixedhitbox.Commands;
 using fixedhitbox.Events;
 using fixedhitbox.Options;
+using fixedhitbox.Services.Apis;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -54,6 +56,20 @@ public sealed class DiscordBotService : BackgroundService
 
             logging.SetMinimumLevel(LogLevel.Warning);
             logging.AddFilter("DSharpPlus", LogLevel.Warning);
+        });
+
+        builder.ConfigureServices(services =>
+        {
+            services.AddHttpClient();
+            services.AddHttpClient<AredlApiService>(client =>
+            {
+                client.BaseAddress = new Uri("https://api.aredl.net/");
+                client.Timeout = TimeSpan.FromSeconds(5);
+            });
+
+            //EF SQLite db
+            //LinkAredlUserService
+            //...TODO
         });
         
         CommandMap.RegisterAllCommands(builder, _options.DebugGuildId);
