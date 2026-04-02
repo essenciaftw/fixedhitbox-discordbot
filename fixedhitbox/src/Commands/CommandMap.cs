@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Commands;
 using DSharpPlus.Commands.Processors.SlashCommands;
+using fixedhitbox.Commands.Modules.Diagnostics;
 using fixedhitbox.Commands.Processors;
 
 namespace fixedhitbox.Commands;

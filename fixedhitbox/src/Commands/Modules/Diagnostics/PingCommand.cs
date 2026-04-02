@@ -5,7 +5,7 @@ using DSharpPlus.Commands.Processors.SlashCommands.Localization;
 using fixedhitbox.Commands.Translations;
 using fixedhitbox.Utils;
 
-namespace fixedhitbox.Commands;
+namespace fixedhitbox.Commands.Modules.Diagnostics;
 
 public sealed class PingCommand
 {
