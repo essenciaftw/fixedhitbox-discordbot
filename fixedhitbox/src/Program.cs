@@ -1,7 +1,5 @@
 ﻿using DotNetEnv;
 using fixedhitbox.Application;
-using fixedhitbox.Application.Interfaces.Aredl;
-using fixedhitbox.Application.UseCases.LinkAredl;
 using fixedhitbox.DiscordBot.Options;
 using fixedhitbox.HostedService;
 using fixedhitbox.Infrastructure;
@@ -32,19 +30,7 @@ internal static class Program
             builder.Services.AddInfrastructure(builder.Configuration);
             builder.Services.AddApplication();
             builder.Services.AddHostedService<DiscordBotService>();
-            
-            builder.Services
-                .AddOptions<DiscordOptions>()
-                .Bind(builder.Configuration.GetSection("Discord"))
-                .Validate(
-                    options => !string.IsNullOrWhiteSpace(options.Token),
-                    "Discord token is required.")
-
-                .Validate(
-                    options => options.DebugGuildId > 0,
-                    "Discord debug guild id must be greater than zero.")
-
-                .ValidateOnStart();
+            builder.Services.AddDiscordOptions(builder.Configuration);
 
             builder.Logging.ClearProviders();
             builder.Logging.SetMinimumLevel(LogLevel.Information);
