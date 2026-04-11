@@ -49,7 +49,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Application\Interfaces\Application\" />
       <Folder Include="Application\Mappers\" />
+      <Folder Include="DiscordBot\Interactions\Accounts\" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,9 +1,7 @@
 ﻿using fixedhitbox.Application.DTOs;
-using fixedhitbox.Shared;
 using fixedhitbox.Shared.Results.Cache;
-using Microsoft.Extensions.Caching.Memory;
 
-namespace fixedhitbox.Application.Interfaces;
+namespace fixedhitbox.Application.Interfaces.Infra.Aredl;
 
 public interface IAredlCache
 {

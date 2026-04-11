@@ -2,23 +2,23 @@
 
 namespace fixedhitbox.DiscordBot.Commands.Translations;
 
-public class PingTranslator : IInteractionLocalizer
+public class InspectPlayerTranslator : IInteractionLocalizer
 {
 
     public ValueTask<IReadOnlyDictionary<DiscordLocale, string>> TranslateAsync(string fullSymbolName)
         => fullSymbolName switch
         {
-            "ping.name" => ValueTask.FromResult<IReadOnlyDictionary<DiscordLocale, string>>(
+            "inspect.name" => ValueTask.FromResult<IReadOnlyDictionary<DiscordLocale, string>>(
                 new Dictionary<DiscordLocale, string>
                 {
-                    { DiscordLocale.en_US, "ping" },
-                    { DiscordLocale.pt_BR, "ping" }
+                    { DiscordLocale.en_US, "inspect" },
+                    { DiscordLocale.pt_BR, "inspecionar" }
                 }),
-            "ping.description" => ValueTask.FromResult<IReadOnlyDictionary<DiscordLocale, string>>(
+            "inspect.description" => ValueTask.FromResult<IReadOnlyDictionary<DiscordLocale, string>>(
                 new Dictionary<DiscordLocale, string>
                 {
-                    { DiscordLocale.en_US, "Pings the bot to check its latency." },
-                    { DiscordLocale.pt_BR, "Verifica a latência do bot." }
+                    { DiscordLocale.en_US, "Take a peek at a player's information.." },
+                    { DiscordLocale.pt_BR, "Dá uma espiada nas informações de um jogador." }
                 }),
             _ => ValueTask.FromResult<IReadOnlyDictionary<DiscordLocale, string>>(
                 new Dictionary<DiscordLocale, string>())

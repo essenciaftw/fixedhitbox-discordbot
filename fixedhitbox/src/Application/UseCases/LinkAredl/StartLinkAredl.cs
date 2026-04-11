@@ -1,6 +1,6 @@
 ﻿using fixedhitbox.Application.DTOs;
-using fixedhitbox.Application.Interfaces;
-using fixedhitbox.Application.Interfaces.Aredl;
+using fixedhitbox.Application.Interfaces.Application.Aredl;
+using fixedhitbox.Application.Interfaces.Infra.Aredl;
 using fixedhitbox.Application.Mappers.Aredl;
 using fixedhitbox.Domain.Enums;
 using fixedhitbox.Domain.Repositories;
@@ -35,7 +35,7 @@ public sealed class StartLinkAredl(
             var dto = AredlProfileMapper.MapFromEntity(existingUser);
             
             if (!dto.Success) return ResultData<PendingAredlLinkDto>
-                .UnexpectedError(dto.Error ?? "AredlProfileMapper could not map a existing user.");
+                .UnexpectedError(dto.Error ?? "[StartLinkAredl] AredlProfileMapper could not map an existing user.");
             
             aredlCache.SetLinkedUser(discordId, dto.Value!);
             return ResultData<PendingAredlLinkDto>.AlreadyLinked(dto.Value!);

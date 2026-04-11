@@ -3,7 +3,7 @@ using DSharpPlus.Commands;
 using DSharpPlus.Commands.Processors.SlashCommands;
 using DSharpPlus.Commands.Processors.SlashCommands.Localization;
 using DSharpPlus.Entities;
-using fixedhitbox.Application.Interfaces.Aredl;
+using fixedhitbox.Application.Interfaces.Application.Aredl;
 using fixedhitbox.DiscordBot.Commands.Translations;
 using fixedhitbox.DiscordBot.Utils;
 using fixedhitbox.DiscordBot.Views.Aredl;
@@ -18,7 +18,7 @@ public sealed class LinkAredlCommand()
 
     [Command("link-aredl"), InteractionLocalizer<LinkAredlTranslator>]
     [Description("Link your Discord account to your AREDL profile.")]
-    public async ValueTask ExecuteAsync(CommandContext ctx)
+    public static async ValueTask ExecuteAsync(CommandContext ctx)
     {
         var locale = ctx.As<SlashCommandContext>().Interaction.Locale;
         

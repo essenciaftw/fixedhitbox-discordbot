@@ -2,6 +2,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using fixedhitbox.Application.DTOs;
 using fixedhitbox.Application.Interfaces;
+using fixedhitbox.Application.Interfaces.Infra.Aredl;
 using fixedhitbox.Application.Mappers.Aredl;
 using fixedhitbox.Infrastructure.External.Aredl.DTOs;
 using fixedhitbox.Shared.Results.Api;

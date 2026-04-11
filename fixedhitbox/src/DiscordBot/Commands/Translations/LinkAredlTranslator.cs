@@ -2,7 +2,7 @@ using DSharpPlus.Commands.Processors.SlashCommands.Localization;
 
 namespace fixedhitbox.DiscordBot.Commands.Translations;
 
-public abstract class LinkAredlTranslator : IInteractionLocalizer
+public class LinkAredlTranslator : IInteractionLocalizer
 {
 
     public ValueTask<IReadOnlyDictionary<DiscordLocale, string>> TranslateAsync(string fullSymbolName)

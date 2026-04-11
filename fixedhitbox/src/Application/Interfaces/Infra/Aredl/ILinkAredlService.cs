@@ -1,7 +1,7 @@
 ﻿using fixedhitbox.Domain.Domain_DTOs;
 using fixedhitbox.Shared;
 
-namespace fixedhitbox.Application.Interfaces;
+namespace fixedhitbox.Application.Interfaces.Infra.Aredl;
 
 public interface ILinkAredlService
 {

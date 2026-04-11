@@ -1,5 +1,6 @@
 ﻿using fixedhitbox.Application.DTOs;
 using fixedhitbox.Application.Interfaces;
+using fixedhitbox.Application.Interfaces.Infra.Aredl;
 using fixedhitbox.Shared;
 using fixedhitbox.Shared.Results.Cache;
 using Microsoft.Extensions.Caching.Memory;

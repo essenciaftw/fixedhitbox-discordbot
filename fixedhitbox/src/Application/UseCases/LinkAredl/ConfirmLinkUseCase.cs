@@ -1,6 +1,6 @@
 ﻿namespace fixedhitbox.Application.UseCases.LinkAredl;
 
-public class ConfirmLinkUseCase
+public sealed class ConfirmLinkUseCase
 {
     
 }

@@ -1,4 +1,5 @@
 ﻿using fixedhitbox.Application.Interfaces;
+using fixedhitbox.Application.Interfaces.Infra.Aredl;
 using fixedhitbox.Domain.Repositories;
 using fixedhitbox.Infrastructure.Cache;
 using fixedhitbox.Infrastructure.Config;

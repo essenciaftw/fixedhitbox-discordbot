@@ -15,6 +15,7 @@
 
 
 using fixedhitbox.Application.Interfaces;
+using fixedhitbox.Application.Interfaces.Infra.Aredl;
 using fixedhitbox.Domain.Domain_DTOs;
 using fixedhitbox.Domain.Entities;
 using fixedhitbox.Domain.Enums;
